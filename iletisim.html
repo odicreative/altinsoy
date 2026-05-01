@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altinsoy Grup - İletişim | Bizimle İletişime Geçin</title>
+    <meta name="description" content="Altinsoy Grup iletişim bilgileri. Aksaray merkezde kolay ulaşılabilir konum. 30 yıllık tecrübe ile projelerinize çözümler üretin.">
+    <meta name="keywords" content="Altinsoy Grup, iletişim, Aksaray, telefon, adres, e-posta, harita">
+    <meta name="author" content="Altinsoy Grup">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (Facebook için) -->
+    <meta property="og:title" content="Altinsoy Grup - İletişim | Bizimle İletişime Geçin">
+    <meta property="og:description" content="Altinsoy Grup iletişim bilgileri. Aksaray merkezde kolay ulaşılabilir konum. 30 yıllık tecrübe ile projelerinize çözümler üretin.">
+    <meta property="og:image" content="/assets/images/slider1.jpg">
+    <meta property="og:url" content="/iletisim">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Altinsoy Grup - İletişim | Bizimle İletişime Geçin">
+    <meta name="twitter:description" content="Altinsoy Grup iletişim bilgileri. Aksaray merkezde kolay ulaşılabilir konum. 30 yıllık tecrübe ile projelerinize çözümler üretin.">
+    <meta name="twitter:image" content="/assets/images/slider1.jpg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/style-new.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <a href="/">
+                        <img src="/assets/icons/logo.png" alt="ALTINSOY GRUP Logo" class="logo-img" loading="lazy">
+                    </a>
+                </div>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <div class="nav-container">
+                    <nav class="nav-links">
+                        <a href="/">Anasayfa</a>
+                        <a href="/hakkimizda">Hakkımızda</a>
+                        <a href="/yonetim-kurulu">Yönetim Kurulu</a>
+                        <a href="/basin-odasi">Basın Odası</a>              
+                        <a href="/hizmetler">Hizmetlerimiz</a>
+                        <a href="/iletisim" class="active">İletişim</a>
+                    </nav>
+                    <button class="btn btn-primary contact-btn" onclick="window.location.href='#contact-form'">Mesaj Gönder</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTACT HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">İletişim</h1>
+            <p class="hero-subtitle">Bizimle iletişime geçin, projeleriniz için çözümler üretelim</p>
+            <div class="hero-cta">
+                <a href="#contact-form" class="btn btn-outline btn-large">Mesaj Gönder</a>
+                <a href="#contact-info" class="btn btn-primary btn-large">Bilgiler</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT INFO SECTION -->
+    <section id="contact-info" class="section section-light scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">İletişim Bilgileri</h2>
+            <p class="section-subtitle">Bize ulaşabileceğiniz tüm kanallar</p>
+            
+            <div class="contact-info-grid">
+                <div class="contact-info-card animate-fadeInUp">
+                    <div class="contact-icon">📍</div>
+                    <h3>Adres</h3>
+                    <p>
+                        Aksaray, Türkiye<br>
+                        Merkez, 68<br>
+                        68200
+                    </p>
+                </div>
+                
+                <div class="contact-info-card animate-fadeInUp">
+                    <div class="contact-icon">📞</div>
+                    <h3>Telefon</h3>
+                    <p>
+                        <a href="tel:03822132323">0382 213 23 23</a><br>
+                        <a href="tel:05551234567">0555 123 45 67</a>
+                    </p>
+                </div>
+                
+                <div class="contact-info-card animate-fadeInUp">
+                    <div class="contact-icon">📧</div>
+                    <h3>E-posta</h3>
+                    <p>
+                        <a href="mailto:info@altinsoygrup.com">info@altinsoygrup.com</a><br>
+                        <a href="mailto:iletisim@altinsoygrup.com">iletisim@altinsoygrup.com</a>
+                    </p>
+                </div>
+                
+                <div class="contact-info-card animate-fadeInUp">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Çalışma Saatleri</h3>
+                    <p>
+                        Pazartesi - Cuma: 09:00 - 18:00<br>
+                        Cumartesi: 09:00 - 14:00<br>
+                        Pazar: Kapalı
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact-form" class="section section-light scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Mesaj Gönderin</h2>
+            <p class="section-subtitle">Projeleriniz veya sorularınız için bize yazın</p>
+            
+            <div class="contact-form-container">
+                <div class="contact-form animate-fadeInUp">
+                    <form action="#" method="POST" class="form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Ad Soyad *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-posta *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Konu *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Konu Seçin</option>
+                                    <option value="genel">Genel Bilgi</option>
+                                    <option value="teklif">Teklif Talebi</option>
+                                    <option value="proje">Proje Danışmanlığı</option>
+                                    <option value="sikayet">Şikayet ve Öneri</option>
+                                    <option value="diger">Diğer</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mesaj *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkmark"></span>
+                                Kişisel verilerimin korunmasına yönelik <a href="#" target="_blank">aydınlatma metnini</a> okudum ve kabul ediyorum.
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large">Mesaj Gönder</button>
+                            <button type="reset" class="btn btn-outline">Formu Temizle</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="contact-info-side animate-fadeInUp">
+                    <div class="info-box">
+                        <h3>Neden Bizi Seçmelisiniz?</h3>
+                        <ul>
+                            <li>30 yıllık tecrübe</li>
+                            <li>Profesyonel hizmet</li>
+                            <li>7/24 destek</li>
+                            <li>Müşteri memnuniyeti</li>
+                            <li>Özelleştirilmiş çözümler</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Hızlı Cevap</h3>
+                        <p>
+                            Mesajlarınız en geç 24 saat içinde cevaplanır. Acil durumlar için telefon ile ulaşabilirsiniz.
+                        </p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>Sosyal Medya</h3>
+                        <div class="social-icons">
+                            <a href="#" target="_blank" class="social-icon">
+                                <img src="/assets/icons/instagram.jpg" alt="Instagram" loading="lazy">
+                            </a>
+                            <a href="#" target="_blank" class="social-icon">
+                                <img src="/assets/icons/facebook.png" alt="Facebook" loading="lazy">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="section section-light scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Konumumuz</h2>
+            <p class="section-subtitle">Aksaray merkezde kolay ulaşılabilir konum</p>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <h3>Harita</h3>
+                        <p>
+                            Aksaray Merkez<br>
+                            68200 Aksaray, Türkiye
+                        </p>
+                        <a href="https://maps.google.com/?q=Aksaray+Merkez+68" target="_blank" class="btn btn-primary">
+                            Google Harita'da Aç
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta scroll-reveal">
+        <div class="container">
+            <h2 class="cta-title">Projeleriniz Hakkında Konuşalım</h2>
+            <p class="cta-description">
+                30 yıllık tecrübemizle projelerinize değer katmak için hemen iletişime geçin.
+            </p>
+            <div class="hero-cta">
+                <a href="/hizmetler" class="btn btn-outline btn-large">Hizmetlerimiz</a>
+                <a href="#contact-form" class="btn btn-primary btn-large">Mesaj Gönder</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/">
+                        <img src="/assets/icons/logo-white.png" alt="ALTINSOY GRUP Logo" class="footer-logo" loading="lazy">
+                    </a>
+                    <p class="footer-description">
+                        30 yıllık tecrübe ile Aksaray'a değer katan köklü bir kuruluşuz.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="/">Anasayfa</a></li>
+                        <li><a href="/hakkimizda">Hakkımızda</a></li>
+                        <li><a href="/yonetim-kurulu">Yönetim Kurulu</a></li>
+                        <li><a href="/basin-odasi">Basın Odası</a></li>
+                        <li><a href="/hizmetler">Hizmetlerimiz</a></li>
+                        <li><a href="/iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" class="social-icon">
+                            <img src="/assets/icons/instagram.jpg" alt="Instagram" loading="lazy">
+                        </a>
+                        <a href="#" target="_blank" class="social-icon">
+                            <img src="/assets/icons/facebook.png" alt="Facebook" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Altinsoy Grup. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/app-new.js"></script>
+    
+    <!-- Form JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Form verilerini topla
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Basit validasyon
+                    if (!data.name || !data.email || !data.message) {
+                        alert('Lütfen tüm alanları doldurun.');
+                        return;
+                    }
+                    
+                    // Email validasyonu
+                    if (!validateEmail(data.email)) {
+                        alert('Lütfen geçerli bir e-posta adresi girin.');
+                        return;
+                    }
+                    
+                    // Başarı mesajı
+                    alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
+                    form.reset();
+                });
+            }
+            
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+        });
+    </script>
+</body>
+</html>
