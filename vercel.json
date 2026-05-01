@@ -1,10 +1,10 @@
 {
   "functions": {
     "*.php": {
-      "runtime": "@vercel/php"
+      "runtime": "now-php@3.0.0"
     },
     "api/*.php": {
-      "runtime": "@vercel/php"
+      "runtime": "now-php@3.0.0"
     }
   },
   "routes": [
