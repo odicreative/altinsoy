@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altınsoy Grup - Yönetim Kurulu</title>
+    <meta name="description" content="Altınsoy Grup, inşaat, eğitim ve petrol sektörlerinde faaliyet gösteren öncü bir şirkettir. Yönetim Kurulu üyelerimizi tanıyın.">
+    <meta name="keywords" content="Altınsoy Grup, yönetim kurulu, şirket, inşaat, eğitim, petrol, Aksaray">
+    <meta name="author" content="Altınsoy Grup">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(210, 210, 210, 0.7);
+    border-bottom: 1px solid #ddd;
+    height: auto; /* Yüksekliği auto yaparak içeriğe göre ayarlansın */
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 80px; /* Logo konteyner yüksekliği */
+}
+
+.logo-container img {
+    width: 180px; /* Sabit genişlik */
+    height: auto;
+    object-fit: contain;
+    transition: width 0.3s ease; /* Yumuşak geçiş efekti */
+}
+
+/* Tablet için responsive ayarlar */
+@media (max-width: 1024px) {
+    .header {
+        padding: 10px 30px;
+    }
+
+    .logo-container {
+        height: 70px;
+    }
+
+    .logo-container img {
+        width: 180px; /* Tablet için biraz daha küçük */
+    }
+}
+
+/* Mobil için responsive ayarlar */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .logo-container {
+        height: 60px;
+    }
+
+    .logo-container img {
+        width: 150px; /* Mobil için daha küçük */
+    }
+
+    .menu-toggle {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/* Çok küçük ekranlar için */
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 15px;
+    }
+
+    .logo-container {
+        height: 50px;
+    }
+
+    .logo-container img {
+        width: 120px; /* En küçük ekranlar için */
+    }
+}
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            z-index: 2000;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: gray;
+            font-size: 18px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0;
+            height: 2px;
+            background-color: green;
+            transition: width 0.4s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            color: green;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .contact-btn {
+            padding: 10px 20px;
+            border: 2px solid black;
+            background: white; /* Butonun varsayılan rengi */
+            color: black; /* Yazı rengini görünür yap */
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+            height: 40px;
+            width: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 7px;
+        }
+
+        .contact-btn:hover {
+            background: black;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* HAMBURGER MENÜ */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+            z-index: 3000; /* En üstte göster */
+            position: relative; /* Butonu en önde tut */
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                width: 100%;
+                background-color: white;
+                text-align: center;
+                padding: 20px 0;
+                border-top: 1px solid #ddd;
+                display: none;
+            }
+
+            .nav-container.active {
+                display: flex;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .contact-btn {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1B3B1A; /* Koyu yeşil */
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: auto; /* Sayfanın en altına itiyor */
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: green;
+            transform: scale(1.1);
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: translateY(-5px);
+            filter: brightness(1.3);
+        }
+
+        .footer-bottom {
+            margin-top: 25px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links li {
+                display: block;
+                margin: 8px 0;
+            }
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 450px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .card img {
+            width: 100%; /* Kartın genişliğine tam uyum sağlar */
+            max-width: 320px; /* Maksimum genişlik */
+            height: 320px; /* Tüm resimlerin yüksekliği eşitlenir */
+            object-fit: contain; /* Resimlerin tamamı görünür, kesilmez */
+            border-radius: 10px; /* Hafif yuvarlak kenarlar */
+            display: block;
+            margin: 0 auto;
+            background-color: white; /* Arka planı beyaz yaparak bütünlük sağlar */
+        }
+
+
+
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        @media (min-width: 768px) {
+            .cards-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .card {
+                width: 45%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/icons/logo.png" alt="ALTINSOY GRUP Logo" class="logo-img">
+            </a>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="nav-container">
+            <nav class="nav-links">
+                <a href="index.html">Anasayfa</a>
+                <a href="index.html#about">Hakkımızda</a>
+                <a href="yonetin_kurulu.html">Yönetim Kurulu</a>
+                <a href="basin.html">Basın Odası</a>              
+                <a href="index.html#services">Hizmetlerimiz</a>
+            </nav>
+            <button class="contact-btn" onclick="window.location.href='contact.html';">İletişim</button>
+        </div>
+    </header>
+
+    <!-- İçerik Buraya Gelecek -->
+    <main >
+        <h1>Yönetim Kurulu</h1>
+        <div class="cards-container">
+            <div class="card">
+                <img src="assets/images/genel_baskan.jpg" alt="Altınsoy Grup Yönetim Kurulu Başkanı Yılmaz Altınsoy">
+                <h2>Yılmaz Altınsoy</h2>
+                <h4>Yönetim Kurulu Başkanı</h4>
+                <br>
+                <p>01.12.1969 tarihinde Aksaray’da doğdu.
+                    İlk, orta, lise ve üniversite eğitimini Aksaray’da tamamladı.
+                    1991 yılında Bursa Polis Okulu’ndan mezun oldu ve 1991-1994 yılları arasında Amasya Emniyet Müdürlüğü’nde görev yaptı.
+                    1994 yılında Aksaray Köy Hizmetleri İl Müdürlüğü’ne yatay geçiş yaparak Makine İkmal Şube Müdürlüğü bünyesinde Atölye Mühendisliği, İkmal Mühendisliği ve İşletme Mühendisliği görevlerinde bulundu.
+                    2008 yılında Aksaray Valiliği tarafından Destek Hizmetleri Müdürü olarak atandı.
+                    2012 yılında Aksaray İl Özel İdaresi'nde Genel Sekreter Yardımcısı olarak görevlendirildi.
+                    Günümüzde Aksaray’da çeşitli ticari ve sosyal faaliyetlerde aktif olarak yer almaktadır.</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/yardimci.jpg" alt="Altınsoy Grup Yönetim Kurulu Başkanı Yardımcısı Ömer Altınsoy" >
+                <h2>Ömer Altınsoy</h2>
+                <h4>Yönetim Kurulu Başkan Yardımcısı</h4>
+                <br>
+                <p>20.05.1997 tarihinde Aksaray’da doğdu.
+                    İlk, orta, lise eğitimini Aksaray’da tamamladı.
+                    Üniversite eğitimini 2019 yılında Nuh Naci Yazgan Üniversitesi Güzel Sanatlar ve Tasarım Fakültesi Mimarlık bölümünden Mimar olarak mezun oldu.Altınsoy Şirketler Grubunun İnşaat , Eğitim ve Petrol sektöründen sorumluluklarına devam etmektedir.
+                    Günümüzde Aksaray’da çeşitli ticari ve sosyal faaliyetlerde aktif olarak yer almaktadır.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="assets/icons/logo-white.png" alt="ALTINSOY GRUP Logo" style="width: 180px; height: auto;">
+                </a>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.html#about">Hakkımızda</a></li>
+                <li><a href="yonetin_kurulu.html">Yönetim Kurulu</a></li>
+                <li><a href="basin.html">Basın Odası</a></li>
+                <li><a href="index.html#services">Hizmetler</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><img src="assets/icons/instagram.jpg" alt="Instagram"></a>
+                <a href="#"><img src="assets/icons/facebook.png" alt="Facebook"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2025 Altınsoy Grup Tüm hakları saklıdır. |<a style="color:white;"> ODi Creative</a></div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-container").classList.toggle("active");
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".card");
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = 1;
+                    card.style.transform = "translateY(0)";
+                }, index * 500);
+            });
+        });
+    </script>
+
+</body>
+</html>
