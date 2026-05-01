@@ -1,0 +1,32 @@
+# Vercel'e yüklenmeyecek dosyalar
+node_modules/
+.git/
+.gitignore
+README.md
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
+.env.production
+composer.lock
+vendor/
+
+# Test dosyaları
+test.php
+encoding-test.php
+rewrite-test.php
+
+# Eski versiyonlar (isteğe bağlı)
+style.css
+app.js
+header.php
+footer.php
+index.php
+hakkimizda.php
+hizmetler.php
+iletisim.php
+
+# Geçici dosyalar
+*.tmp
+*.temp

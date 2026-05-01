@@ -1,0 +1,761 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(210, 210, 210, 0.7);
+    border-bottom: 1px solid #ddd;
+    height: auto;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 80px;
+}
+
+.logo-container img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+    transition: width 0.3s ease;
+}
+
+/* Tablet için responsive ayarlar */
+@media (max-width: 1024px) {
+    .header {
+        padding: 10px 30px;
+    }
+
+    .logo-container {
+        height: 70px;
+    }
+
+    .logo-container img {
+        width: 180px;
+    }
+}
+
+/* Mobil için responsive ayarlar */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .logo-container {
+        height: 60px;
+    }
+
+    .logo-container img {
+        width: 150px;
+    }
+
+    .menu-toggle {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/* Çok küçük ekranlar için */
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 15px;
+    }
+
+    .logo-container {
+        height: 50px;
+    }
+
+    .logo-container img {
+        width: 120px;
+    }
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    z-index: 2000;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: gray;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a.active {
+    color: green;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: green;
+    transition: width 0.4s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: green;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.contact-btn {
+    border: 2px solid black;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    height: 40px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+.contact-btn:hover {
+    background: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* HAMBURGER MENÜ */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 3000;
+    position: relative;
+} 
+
+/* SLIDER STÝLÝ */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+
+/* slider RESPONSIVE AYARLAR */
+@media (max-width: 1024px) {
+    .slider-container {
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        height: 300px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        height: 250px;
+    }
+
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #ddd;
+        display: none;
+    }
+
+    .nav-container.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-btn {
+        display: block;
+        margin: 5px auto;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* FOOTER */
+footer {
+    background: #1B3B1A;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-links a:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icons img:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.3);
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links li {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+/* INFO SECTION (Metin ve Görselli Alan) */
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    gap: 50px;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-text h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.info-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.info-text a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.info-text a:hover {
+    color: #0056b3;
+}
+
+.info-image {
+    flex: 1;
+    text-align: right;
+}
+
+.info-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .info-text {
+        text-align: center;
+    }
+
+    .info-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* SERVICES (Kartlý Bilgi Alaný) */
+.services-section {
+    background: #f5f8f6;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.services-section h3 {
+    color: green;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Kart Konteyneri */
+.services-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 1400px;
+    margin: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Kart Stili */
+.service-card {
+    width: 23%;
+    min-width: 250px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    max-width: 350px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card-content {
+    padding: 20px;
+}
+
+.service-card-content h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.service-card-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Mobil Uyum */
+@media (max-width: 992px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+        overflow: visible;
+    }
+
+    .service-card {
+        max-width: 90%;
+    }
+}
+
+/* Mobilde tek sütun olacak */
+@media (max-width: 768px) {
+    .service-card {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* MODAL STÝLÝ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+#modalDescription {
+    max-height: 400px;
+    overflow-y: auto;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* KAPATMA BUTONU */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* MODAL ÝÇÝNDEKÝ GÖRSEL */
+.modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-button {
+    display: inline-block;
+    margin-top: 15px;
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.modal-button:hover {
+    background: darkgreen;
+}
+
+/* Yavaþça görünme efekti */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html, body {
+    overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* ÝLETÝÞÝM SAYFASI */
+.contact-section {
+    max-width: 90%;
+    margin: 50px auto;
+    background: #f8f9fa;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-box {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.info-box h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contact-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    width: 100%;
+}
+
+.contact-form h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 18px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #007BFF;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.map-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* RESPONSIVE TASARIM */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .map-container {
+        height: 350px;
+    }
+}

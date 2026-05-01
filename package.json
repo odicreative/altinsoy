@@ -1,0 +1,29 @@
+{
+  "name": "altinsoy-grup",
+  "version": "1.0.0",
+  "description": "Altinsoy Grup Kurumsal Web Sitesi",
+  "main": "api/index.php",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Build complete'",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "@vercel/node": "^2.15.6"
+  },
+  "devDependencies": {
+    "vercel": "^28.4.8"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "php",
+    "vercel",
+    "kurumsal",
+    "web",
+    "site"
+  ],
+  "author": "Altinsoy Grup",
+  "license": "MIT"
+}

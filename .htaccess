@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Temiz URL'ler
+RewriteRule ^hakkimizda$ hakkimizda.php [L]
+RewriteRule ^hizmetler$ hizmetler.php [L]
+RewriteRule ^iletisim$ iletisim.php [L]
+RewriteRule ^yonetim-kurulu$ yonetim-kurulu.php [L]
+RewriteRule ^basin-odasi$ basin-odasi.php [L]
+RewriteRule ^insaat$ insaat.php [L]
